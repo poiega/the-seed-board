@@ -10,55 +10,45 @@
     </div>
     <div class="navbar-menu" id="mainNavbar">
         <div class="navbar-start">
-            <a href="/RecentChanges" class="navbar-item">
-                <span class="icon">
-                    <i class="fas fa-binoculars"></i>
-                </span> 최근 변경</a>
             <a href="/RecentDiscuss" class="navbar-item">
                 <span class="icon">
                     <i class="far fa-comments"></i>
-                </span> 최근 토론</a>
+                </span> 최근 게시물</a>
             <div class="navbar-item has-dropdown is-hoverable">
                 <a href="#" class="navbar-link">
                     <span class="icon">
                         <i class="fas fa-cogs"></i>
                     </span> 도구</a>
                 <div class="navbar-dropdown">
-                    <a class="navbar-item" href="/NeededPages">
+                    <a class="navbar-item" href="/w/신고 게시판">
                         <span class="icon">
                             <i class="fas fa-beer"></i>
                         </span>
-                        작성이 필요한 문서
+                        사용자 신고 게시판
                     </a>
-                    <a class="navbar-item" href="/OrphanedPages">
+                    <a class="navbar-item" href="/w/기능 문의">
                         <span class="icon">
                             <i class="far fa-frown"></i>
                         </span>
-                        고립된 문서
+                        기능 문의 게시판
                     </a>
-                    <a class="navbar-item" href="/UncategorizedPages">
+                    <a class="navbar-item" href="/w/기능 건의">
                         <span class="icon">
                             <i class="far fa-question-circle"></i>
                         </span>
-                        분류가 되지 않은 문서
+                        기능 건의 게시판
                     </a>
-                    <a class="navbar-item" href="/OldPages">
+                    <a class="navbar-item" href="/w/버그 제보">
                         <span class="icon">
                             <i class="fas fa-pause"></i>
                         </span>
-                        편집된 지 오래된 문서
+                        버그 제보 게시판
                     </a>
-                    <a class="navbar-item" href="/ShortestPages">
+                    <a class="navbar-item" href="/w/자유 게시판">
                         <span class="icon">
                             <i class="far fa-thumbs-down"></i>
                         </span>
-                        내용이 짧은 문서
-                    </a>
-                    <a class="navbar-item" href="/LongestPages">
-                        <span class="icon">
-                            <i class="far fa-thumbs-up"></i>
-                        </span>
-                        내용이 긴 문서
+                        자유 게시판
                     </a>
                     <a class="navbar-item" href="/BlockHistory">
                         <span class="icon">
@@ -66,36 +56,16 @@
                         </span>
                         차단 내역
                     </a>
-                    <a class="navbar-item" href="/RandomPage">
-                        <span class="icon">
-                            <i class="fas fa-random"></i>
-                        </span>
-                        RandomPage
-                    </a>
-                    <a class="navbar-item" href="/Upload">
-                        <span class="icon">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </span>
-                        파일 올리기
-                    </a>
                     <a class="navbar-item" href="/License">
                         <span class="icon">
                             <i class="far fa-copyright"></i>
                         </span> 라이선스</a>
-                    {%if perms.has('ipacl') %}
-                    <a class="navbar-item" href="/admin/ipacl">
+                    {%if perms.has('aclgroup') %}
+                    <a class="navbar-item" href="/aclgroup">
                         <span class="icon">
                             <i class="fas fa-ban"></i>
                         </span>
-                        [관리] IPACL
-                    </a>
-                    {% endif %}
-                    {%if perms.has('suspend_account') %}
-                    <a class="navbar-item" href="/admin/suspend_account">
-                        <span class="icon">
-                            <i class="fas fa-ban"></i>
-                        </span>
-                        [관리] 사용자 차단
+                        [관리] ACLGroup
                     </a>
                     {% endif %}
                     {%if perms.has('grant') %}
